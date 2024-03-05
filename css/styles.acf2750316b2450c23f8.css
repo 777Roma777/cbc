@@ -1021,7 +1021,6 @@ div.viafoura.info {
   display: none;
 }
 .feed .ad-risingstar-container {
-  min-height: 122px;
 }
 .feed .ad-risingstar-container.displayNone {
   display: none;
@@ -1171,6 +1170,206 @@ div.viafoura.info {
   position: relative;
   width: 100%;
 }
+.header-wrapper {
+  z-index: 10003;
+  position: relative;
+  background-color: #fff;
+}
+@media (min-width: 768px) {
+  .header-wrapper {
+    max-width: 1142px;
+    margin: auto;
+    height: auto;
+  }
+}
+.header-wrapper nav[data-header-nav] {
+  margin-bottom: 0;
+}
+.header-wrapper nav[data-header-nav] > div {
+  margin-right: 169px;
+}
+.header-wrapper nav[data-header-nav] img {
+  width: 250px;
+  padding-right: 20px;
+}
+.header-wrapper nav[data-header-nav] svg {
+  padding-right: 20px;
+}
+.header-wrapper .widget-ad {
+  margin-top: 20px;
+}
+.header-wrapper nav[data-network-nav] .NetworkNavItems {
+  left: 76px;
+}
+@media (min-width: 640px) {
+  .change-location-widget {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 250px;
+  }
+}
+.change-location-widget .location {
+  padding: 16px;
+}
+@media (min-width: 640px) {
+  .change-location-widget .location {
+    left: 16px;
+  }
+}
+.location {
+  padding: 0 10px 0 20px;
+  z-index: 1004;
+}
+@media (min-width: 640px) {
+  .location {
+    position: absolute;
+    top: 48px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding-left: 20px;
+    width: 100%;
+  }
+}
+.location__wrapper {
+  overflow: visible;
+  position: relative;
+}
+@media (min-width: 640px) {
+  .location__wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 40px;
+    padding-left: 20px;
+    border-left: 1px solid #eaeaea;
+    transform: translate3d(0, -50%, 0);
+  }
+}
+.location__label {
+  color: #999;
+  font-size: 12px;
+  margin-right: 0.4em;
+  white-space: nowrap;
+  display: block;
+}
+.location__value {
+  color: #333;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  font-size: 15px;
+  display: inline-block;
+  max-width: 160px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+@media (min-width: 321px) {
+  .location__value {
+    max-width: 200px;
+  }
+}
+.location__change {
+  color: #6b6b6b;
+  font-size: 16px;
+  font-weight: 500;
+  outline: none;
+  display: inline-block;
+  vertical-align: text-bottom;
+  line-height: 23px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+.location__change:after {
+  content: url(../images/dropdown.05927a57.svg);
+  display: inline-block;
+  vertical-align: bottom;
+  height: 25px;
+}
+.location__change[data-active="true"] + .location__drop-search {
+  display: block;
+}
+.location__change[data-active="true"]:after {
+  transform: rotate(180deg);
+}
+@media (min-width: 1024px) {
+  html:not(.tablet) .location__change:hover {
+    color: #0518c5;
+  }
+}
+.no-touch .location__change:hover {
+  color: #0518c5;
+}
+.location__drop-search {
+  display: none;
+  position: absolute;
+  top: 120%;
+  width: 100%;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+  background: #fff;
+}
+@media (min-width: 500px) {
+  .location__drop-search {
+    width: 220px;
+  }
+}
+@media (min-width: 768px) {
+  .location__drop-search {
+    width: 240px;
+  }
+}
+.drop-search__results-container {
+  text-align: left;
+}
+.weather-widget-wrapper {
+  position: relative;
+  bottom: 70px;
+  height: 0;
+}
+@media (min-width: 640px) {
+  .weather-widget-wrapper {
+    bottom: 21px;
+    height: auto;
+    width: 100%;
+    position: absolute;
+  }
+}
+@media (min-width: 768px) {
+  .weather-widget-wrapper {
+    bottom: 26px;
+  }
+}
+.weather-widget-wrapper .weather-widget {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+.weather-widget-wrapper .weather-widget .weather-button {
+  background: #fff;
+  width: 94px;
+  min-width: 94px;
+  padding: 13px 12px 7px;
+  position: static !important;
+  text-align: right;
+  z-index: 100;
+}
+.weather-widget-wrapper
+  .weather-widget
+  .weather-button:hover
+  .weather-temperature {
+  color: #0518c5;
+}
+.weather-widget-wrapper .weather-widget .weather-button .weather-temperature {
+  margin-left: 10px;
+  font-weight: 700;
+}
 @media (min-width: 1100px) {
   .feed .ad-bigbox-fixed,
   .feed .ad-bigbox-single-desktop {
@@ -1195,8 +1394,7 @@ div.viafoura.info {
     background-color: #e5e5e5;
   }
   .feed .ad-risingstar-container {
-    background-color: #e5e5e5;
-    min-height: 82px;
+
   }
   .feed .advertisement.bigbox-double-inread,
   .feed .advertisement.in-read {
@@ -1302,7 +1500,7 @@ div.viafoura.info {
   background-color: #fff;
   min-height: 800px;
   padding-bottom: 16px;
-  padding-top: 16px;
+  /* padding-top: 16px; */
 }
 .feed .appContainer.featureType .feed-content {
   max-width: 100%;
@@ -21032,6 +21230,7 @@ ul.breadcrumbs li:last-child:after {
   min-height: 48px;
 }
 .feed .globalHeader .landingNav .landingWrapper {
+  overflow: hidden;
   margin: 0 auto;
   max-width: 80rem;
   padding-left: 16px;
